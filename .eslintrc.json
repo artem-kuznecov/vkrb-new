@@ -3,6 +3,7 @@
     "browser": true,
     "es2021": true
   },
+  "ignorePatterns": ["next.config.mjs"],
   "extends": ["standard-with-typescript", "plugin:react/recommended"],
   "parserOptions": {
     "ecmaVersion": "latest",
