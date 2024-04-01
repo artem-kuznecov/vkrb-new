@@ -1,0 +1,66 @@
+@import './_animations.scss';
+
+// * ============================== typography ============================== * //
+
+.text-regular {
+  font-weight: $font-regular;
+}
+
+.text-bold {
+  font-weight: $font-bold;
+}
+
+// * ============================== positioning ============================== * //
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.items {
+  &-y-center{
+    align-items: center;
+  }
+  &-x-center{
+    justify-content: center;
+  }
+  &-center {
+    align-items: center;
+    justify-content: center;
+  }
+  &-between {
+    justify-content: space-between;
+  }
+}
+
+// * ============================== timing ============================== * //
+
+.transition {
+  transition: all $timing linear;
+}
+
+// * ============================== colors ============================== * //
+
+.shadow {
+  &-right {
+    box-shadow: 2px 0px 12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.blured {
+  backdrop-filter: blur(5px);
+}
+
+// .spinning {
+//   animation-name: spin;
+//   animation-duration: 1s;
+
+//   &-infinite {
+//     animation-iteration-count: infinite;
+//   }
+// }
