@@ -5,6 +5,8 @@ package-lock.json
 /.next/
 /out/
 
+/.vscode/
+
 /build
 /dist
 

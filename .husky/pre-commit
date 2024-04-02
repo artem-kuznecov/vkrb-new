@@ -1,0 +1,28 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo '🟡 Pre-Commit Check started'
+
+echo '[1] Checking types ...'
+npm run check:types ||
+(
+  echo '❌ There are type errors. Fix them before you commit:';
+  false
+)
+
+echo '[2] Checking linting ...'
+npm run check:lint ||
+(
+  echo '❌ There are linting errors. Fix them before you commit:';
+  false
+)
+
+echo '[3] Trying to build ...'
+npm run build ||
+(
+  echo '❌ An error occured while trying to build your project:',
+  false
+)
+
+echo '✅ All checks passed, commiting'
+

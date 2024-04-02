@@ -3,7 +3,7 @@
   "eslint.format.enable": true,
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always"
+    "source.fixAll.eslint": "never"
   },
   "eslint.validate": ["javascript", "typescript"]
 }

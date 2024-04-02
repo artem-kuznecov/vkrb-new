@@ -8,9 +8,11 @@ const Providers = ({ children }: { children: React.ReactNode }): React.JSX.Eleme
   const { language, setLang } = preferences
 
   // * set language depending on locale
-  const navigatorLocale = window.navigator.language.substring(0, 2)
-  if ((navigatorLocale === 'ru' || navigatorLocale === 'en') && navigatorLocale !== language) {
-    setLang(navigatorLocale)
+  if (typeof window !== 'undefined') {
+    const navigatorLocale = window.navigator.language.substring(0, 2)
+    if ((navigatorLocale === 'ru' || navigatorLocale === 'en') && navigatorLocale !== language) {
+      setLang(navigatorLocale)
+    }
   }
 
   return <ThemeProvider>{children}</ThemeProvider>

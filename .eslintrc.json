@@ -15,6 +15,7 @@
     "react/react-in-jsx-scope": "off",
     "semi": ["error", "never"],
     "space-before-function-paren": ["error", "always"],
-    "quotes": ["error", "single"]
+    "quotes": ["error", "single"],
+    "no-trailing-spaces": "error"
   }
 }
